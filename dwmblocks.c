@@ -297,13 +297,6 @@ termhandler(int signum)
 int
 main(int argc, char** argv)
 {
-	for(int i = 0; i < argc; i++)
-	{
-		if (!strcmp("-d",argv[i]))
-			delim = argv[++i];
-		else if(!strcmp("-p",argv[i]))
-			writestatus = pstdout;
-	}
 	signal(SIGTERM, termhandler);
 	signal(SIGINT, termhandler);
 	statusloop();

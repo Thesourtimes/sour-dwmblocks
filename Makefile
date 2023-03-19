@@ -15,3 +15,5 @@ install: output
 	install -m 0755 dwmblocks $(DESTDIR)$(PREFIX)/bin/dwmblocks
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dwmblocks
+run:
+	kill $(pgrep dwmblocks) & dwmblocks > /dev/null
